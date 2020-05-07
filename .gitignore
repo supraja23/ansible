@@ -1,0 +1,10 @@
+galaxy_roles/*
+tmp/*
+*.swp
+*.pyc
+*.retry
+.vagrant
+*.gz
+*.zip
+inventories/group_vars/*/secret/*
+!.keep

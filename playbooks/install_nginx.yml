@@ -1,0 +1,9 @@
+--- 
+- 
+  hosts: all:!skip
+  gather_facts: yes
+  roles: 
+    - 
+      role: nginx
+
+# By default, this would install nginx/1.16.1.

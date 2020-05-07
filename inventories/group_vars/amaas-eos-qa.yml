@@ -1,0 +1,3 @@
+#cluster_vip: 10.207.104.38
+#iscsi_server: 10.199.211.253
+#iscsi_disk: iqn.2017-08.com.emc.lab.cec:vmaxv3-iscsi20

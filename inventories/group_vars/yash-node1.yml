@@ -1,0 +1,4 @@
+#cluster_vip: 10.207.104.38
+#iscsi_server: 10.199.211.253
+#iscsi_disk: iqn.1994-05.com.redhat:cd919c5fec57
+
