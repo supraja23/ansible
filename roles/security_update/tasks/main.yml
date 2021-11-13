@@ -1,0 +1,30 @@
+---
+# tasks file for security_update
+- name: Check node status
+  shell: jps | grep jenkins | wc -l
+  ignore_errors: yes
+  changed_when: false
+  register: service_jenkins_status
+  check_mode: no
+  tags: always
+
+- name: service jenkins status
+  debug:
+    var: service_jenkins_status
+    verbosity: 1
+
+- name: Run update on a standby node
+  include_tasks: update.yml
+  when: service_jenkins_status.stdout|int < 1
+
+- name: Debug standby update
+  debug:
+    var: update
+
+- name: Run update on an active node
+  include_tasks: update.yml
+  when: service_jenkins_status.stdout|int > 0
+
+- name: Debug active update
+  debug:
+    var: update
