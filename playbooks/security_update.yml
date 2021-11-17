@@ -1,0 +1,8 @@
+---
+-
+  hosts: 10.118.250.47
+  gather_facts: yes
+  roles:
+    -
+      role: security_update
+~
